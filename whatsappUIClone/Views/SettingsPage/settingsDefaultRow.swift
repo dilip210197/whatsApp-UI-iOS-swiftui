@@ -12,15 +12,24 @@ struct settingsDefaultRow: View {
     var settingIcon:Image
     var settingBGColor:Color
     var settingName:String
+    var dividerHidden:Bool
     
     var body: some View {
         HStack{
-            Image(systemName: "person.circle")
-                .background(.yellow)
-                .cornerRadius(4)
+            settingIcon
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.white)
+                    .background(settingBGColor)
+                        .cornerRadius(5)
+                        .padding([.trailing])
             VStack(alignment: .leading){
-            Text(settingName)
-            Divider()
+                if dividerHidden{
+                    Text(settingName)
+                }else{
+                    Text(settingName)
+                    .padding(.top,9)
+                    Divider()
+                }
             }
         }
     }
@@ -28,6 +37,8 @@ struct settingsDefaultRow: View {
 
 struct settingsDefaultRow_Previews: PreviewProvider {
     static var previews: some View {
-        settingsDefaultRow(settingIcon: Image(systemName: "person.circle"), settingBGColor: .gray, settingName: "notification")
+        settingsDefaultRow(settingIcon: Image(systemName: "person.circle"), settingBGColor: .gray, settingName: "notification", dividerHidden: true)
+        settingsDefaultRow(settingIcon: Image(systemName: "person.circle"), settingBGColor: .gray, settingName: "notification", dividerHidden: true)
+
     }
 }

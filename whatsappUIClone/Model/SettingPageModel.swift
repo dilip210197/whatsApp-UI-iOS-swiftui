@@ -8,18 +8,12 @@
 import Foundation
 import SwiftUI
 
-struct SettingPageModel: Codable,Hashable {
+struct SettingPageModel: Codable,Identifiable,Hashable {
     
-    let title: String
-    let section:Int
-    var bgColor:Color{
-        ColorAndImage().1
-    }
-    var image:Image{
-        ColorAndImage().0
-    }
+    let id: Int
+    let title: [String]
     
-    func ColorAndImage() -> (Image,Color){
+    func ColorAndImage(title:String) -> (Image,Color){
         switch title{
         case "Starred Messages":
             return (Image(systemName: "star"),.yellow)

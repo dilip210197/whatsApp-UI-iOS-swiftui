@@ -1,34 +1,30 @@
 [
-   {
-      "title":"Starred Messages",
-      "section":0
+    {
+       "id":0,
+       "title":[
+          "Own Profile"
+       ]
+    },{
+      "id":1,
+      "title":[
+         "Starred Messages",
+         "WhatsaApp Web/Desktop"
+      ]
    },
    {
-      "title":"WhatsaApp Web/Desktop",
-      "section":0
+      "id":2,
+      "title":[
+         "Account",
+         "Chats",
+         "Notifications",
+         "Data and Storage Usage"
+      ]
    },
    {
-      "title":"Account",
-      "section":1
-   },
-   {
-      "title":"Chats",
-      "section":1
-   },
-   {
-      "title":"Notifications",
-      "section":1
-   },
-   {
-      "title":"Data and Storage Usage",
-      "section":1
-   },
-   {
-      "title":"Help",
-      "section":2
-   },
-   {
-      "title":"Tell a Friend",
-      "section":2
+      "id":3,
+      "title":[
+         "Help",
+         "Tell a Friend"
+      ]
    }
 ]
