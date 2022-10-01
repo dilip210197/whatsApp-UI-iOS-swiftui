@@ -10,6 +10,7 @@ import Foundation
 
 let ChatPageResponse: [ChatPageModel] = load(name: "chatData.json")
 let CallPageResponse: [CallPageModel] = load(name: "callData.json")
+let SettingPageResponse: [SettingPageModel] = load(name: "settingData.json")
 
 func load<T: Decodable>(name filename:String) -> T{
     
